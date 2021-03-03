@@ -64,6 +64,7 @@ class RenamefilesHandler(Baseclass):
      
     def renamefiles(self):
         i = 0
+        
         with open(self.config.debug_out_filepath, 'a', newline='\n', encoding='UTF-8') as self.f:
             for filename in os.listdir(self.config.data_path):
                 if ( not os.path.isfile(os.path.join(self.config.data_path, filename)) or  
